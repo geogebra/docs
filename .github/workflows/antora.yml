@@ -30,3 +30,11 @@ jobs:
           node-version: '20.x'
       - run: npm ci
       - run: npx antora --fetch antora-playbook.yml
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload the site
+          path: './build/site'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
