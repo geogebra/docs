@@ -1,0 +1,10 @@
+site:
+  title: GeoGebra Manual
+  start_page: component-b::index.adoc
+content:
+  sources:
+    - url: https://github.com/geogebra/manual
+ui:
+  bundle:
+    url: ./ui-bundle
+    snapshot: true
