@@ -1,6 +1,6 @@
 site:
   title: GeoGebra Manual
-  start_page: manual::index.adoc
+  start_page: en@manual::index.adoc
 content:
   sources:
     - url: https://github.com/geogebra/manual
