@@ -3,7 +3,7 @@ site:
   start_page: manual::index.adoc
 content:
   sources:
-    - url: https://github.com/geogebra/manual
+    - url: ../manual-content
 ui:
   bundle:
     url: ./ui-bundle
