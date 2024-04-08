@@ -7,6 +7,8 @@ content:
       start_paths:
         - en
         - it
+urls:
+  html_extension_style: indexify
 ui:
   bundle:
     url: ./ui-bundle
