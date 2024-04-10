@@ -7,6 +7,9 @@ content:
       start_paths:
         - en
         - it
+    - url: https://github.com/geogebra/integration
+      start_paths:
+        - reference
 urls:
   html_extension_style: indexify
 ui:

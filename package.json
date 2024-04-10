@@ -1,6 +1,11 @@
 {
+  "scripts": {
+    "build": "antora --fetch antora-playbook.yml",
+    "dev": "node makelocal.mjs && antora --fetch playbook-local.yml"
+  },
   "devDependencies": {
     "@antora/cli": "3.1.7",
-    "@antora/site-generator": "3.1.7"
+    "@antora/site-generator": "3.1.7",
+    "js-yaml": "^4.1.0"
   }
 }
