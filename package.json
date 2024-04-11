@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "antora --fetch antora-playbook.yml",
-    "dev": "node makelocal.mjs && antora --fetch playbook-local.yml"
+    "dev": "node makelocal.mjs && antora --fetch playbook-local.yml && npx serve build/site"
   },
   "devDependencies": {
     "@antora/cli": "3.1.7",
