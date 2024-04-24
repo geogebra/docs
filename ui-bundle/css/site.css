@@ -346,7 +346,7 @@ object[type="image/svg+xml"]:not([width]) {
 	margin-top: .5em
 }
 
-.nav-item[data-depth='1']:hover {
+.nav-item[data-depth='1']:hover nav-text {
 	color: var(--purple)
 }
 
