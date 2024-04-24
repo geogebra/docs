@@ -37,7 +37,7 @@ html {
 
 body {
 	background: #fff;
-	color: #222;
+	color: var(--primary-text);
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	line-height: 1.15;
 	margin: 0;
@@ -149,7 +149,7 @@ object[type="image/svg+xml"]:not([width]) {
 @media (pointer:fine) {
 	@supports (scrollbar-width:thin) {
 		html {
-			scrollbar-color: #c1c1c1 #fafafa
+			scrollbar-color: #c1c1c1 var(--neutral-100)
 		}
 
 		body * {
@@ -159,7 +159,7 @@ object[type="image/svg+xml"]:not([width]) {
 	}
 
 	html::-webkit-scrollbar {
-		background-color: #fafafa;
+		background-color: var(--neutral-100);
 		height: 12px;
 		width: 12px
 	}
@@ -233,7 +233,7 @@ object[type="image/svg+xml"]:not([width]) {
 }
 
 .nav {
-	background: #fafafa;
+	background: var(--neutral-100);
 	position: relative;
 	top: 2.5rem;
 	height: calc(100vh - 6rem)
@@ -284,7 +284,8 @@ object[type="image/svg+xml"]:not([width]) {
 
 .nav-panel-menu:not(.is-active)::after {
 	content: "";
-	background: rgba(0, 0, 0, .5);
+	background: var(--neutral-300);
+	opacity: 0.8;
 	display: block;
 	position: absolute;
 	top: 0;
@@ -345,6 +346,10 @@ object[type="image/svg+xml"]:not([width]) {
 	margin-top: .5em
 }
 
+.nav-item[data-depth='1']:hover {
+	color: var(--purple)
+}
+
 .nav-item-toggle~.nav-list {
 	padding-bottom: .125rem
 }
@@ -382,7 +387,7 @@ object[type="image/svg+xml"]:not([width]) {
 }
 
 .nav-panel-explore {
-	background: #fafafa;
+	background: var(--neutral-100);
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -407,8 +412,8 @@ object[type="image/svg+xml"]:not([width]) {
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
 	color: #5d5d5d;
-	-webkit-box-shadow: 0 -1px 0 #e1e1e1;
-	box-shadow: 0 -1px 0 #e1e1e1;
+	-webkit-box-shadow: 0 -1px 0 var(--neutral-300);
+	box-shadow: 0 -1px 0 var(--neutral-300);
 	padding: 0 .5rem;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -448,9 +453,8 @@ object[type="image/svg+xml"]:not([width]) {
 	-webkit-box-flex: 1;
 	-ms-flex-positive: 1;
 	flex-grow: 1;
-	-webkit-box-shadow: inset 0 1px 5px #e1e1e1;
-	box-shadow: inset 0 1px 5px #e1e1e1;
-	background: #f0f0f0;
+	-webkit-box-shadow: inset 0 1px 5px var(--neutral-300);
+	box-shadow: inset 0 1px 5px var(--neutral-300);
 	padding: .75rem .75rem 0;
 	margin: 0;
 	overflow-y: scroll;
@@ -567,9 +571,9 @@ body.-toc aside.toc.sidebar {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	background-color: #fafafa;
-	-webkit-box-shadow: 0 1px 0 #e1e1e1;
-	box-shadow: 0 1px 0 #e1e1e1;
+	background-color: var(--neutral-100);
+	-webkit-box-shadow: 0 1px 0 var(--neutral-300);
+	box-shadow: 0 1px 0 var(--neutral-300);
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -830,7 +834,7 @@ a+.breadcrumbs {
 
 .toc .toc-menu a {
 	color: inherit;
-	border-left: 2px solid #e1e1e1;
+	border-left: 2px solid var(--neutral-300);
 	display: inline-block;
 	padding: .25rem 0 .25rem .5rem;
 	text-decoration: none
@@ -851,7 +855,7 @@ a+.breadcrumbs {
 }
 
 .sidebar.toc .toc-menu a:focus {
-	background: #fafafa
+	background: var(--neutral-100)
 }
 
 .doc {
@@ -923,7 +927,7 @@ a+.breadcrumbs {
 }
 
 .doc h2:not(.discrete) {
-	border-bottom: 1px solid #e1e1e1;
+	border-bottom: 1px solid var(--neutral-300);
 	margin-left: -1rem;
 	margin-right: -1rem;
 	padding: .4rem 1rem .1rem
@@ -1000,7 +1004,7 @@ a+.breadcrumbs {
 .doc p code,
 .doc thead code {
 	color: #222;
-	background: #fafafa;
+	background: var(--neutral-100);
 	border-radius: .25em;
 	font-size: .95em;
 	padding: .125em .25em
@@ -1140,7 +1144,7 @@ a+.breadcrumbs {
 
 .doc table.tableblock,
 .doc table.tableblock>*>tr>* {
-	border: 0 solid #e1e1e1
+	border: 0 solid var(--neutral-300)
 }
 
 .doc table.grid-all>*>tr>* {
@@ -1195,7 +1199,7 @@ a+.breadcrumbs {
 .doc table.stripes-even>tbody>tr:nth-of-type(2n),
 .doc table.stripes-hover>tbody>tr:hover,
 .doc table.stripes-odd>tbody>tr:nth-of-type(odd) {
-	background: #fafafa
+	background: var(--neutral-100)
 }
 
 .doc table.tableblock>tfoot {
@@ -1253,7 +1257,7 @@ a+.breadcrumbs {
 
 .doc .admonitionblock td.content {
 	padding: 1rem 1rem .75rem;
-	background: #fafafa;
+	background: var(--neutral-100);
 	width: 100%;
 	word-wrap: anywhere
 }
@@ -1385,7 +1389,7 @@ a+.breadcrumbs {
 
 #preamble .abstract blockquote {
 	background: #f0f0f0;
-	border-left: 5px solid #e1e1e1;
+	border-left: 5px solid var(--neutral-300);
 	color: #4a4a4a;
 	font-size: .88889rem;
 	padding: .75em 1em
@@ -1393,7 +1397,7 @@ a+.breadcrumbs {
 
 .doc .quoteblock,
 .doc .verseblock {
-	background: #fafafa;
+	background: var(--neutral-100);
 	border-left: 5px solid #5d5d5d;
 	color: #5d5d5d
 }
@@ -1659,7 +1663,7 @@ a+.breadcrumbs {
 }
 
 .doc .sidebarblock {
-	background: #e1e1e1;
+	background: var(--neutral-300);
 	border-radius: .75rem;
 	padding: .75rem 1.5rem
 }
@@ -1685,9 +1689,9 @@ a+.breadcrumbs {
 .doc .listingblock pre:not(.highlight),
 .doc .literalblock pre,
 .doc pre.highlight>code {
-	background: #fafafa;
-	-webkit-box-shadow: inset 0 0 1.75px #e1e1e1;
-	box-shadow: inset 0 0 1.75px #e1e1e1;
+	background: var(--neutral-100);
+	-webkit-box-shadow: inset 0 0 1.75px var(--neutral-300);
+	box-shadow: inset 0 0 1.75px var(--neutral-300);
 	display: block;
 	overflow-x: auto;
 	padding: .875em
@@ -1893,7 +1897,7 @@ a+.breadcrumbs {
 }
 
 .doc hr {
-	border: solid #e1e1e1;
+	border: solid var(--neutral-300);
 	border-width: 2px 0 0;
 	height: 0
 }
@@ -1915,7 +1919,7 @@ a+.breadcrumbs {
 .doc kbd {
 	display: inline-block;
 	font-size: .66667rem;
-	background: #fafafa;
+	background: var(--neutral-100);
 	border: 1px solid #c1c1c1;
 	border-radius: .25em;
 	-webkit-box-shadow: 0 1px 0 #c1c1c1, 0 0 0 .1em #fff inset;
@@ -2005,7 +2009,7 @@ a+.breadcrumbs {
 }
 
 nav.pagination {
-	border-top: 1px solid #e1e1e1;
+	border-top: 1px solid var(--neutral-300);
 	line-height: 1;
 	margin: 2rem -1rem -1rem;
 	padding: .75rem 1rem 0
@@ -2089,7 +2093,11 @@ body {
 	padding-top: 3.5rem
 }
 body {
-	--primary-text: #000;
+	--primary-text: rgb(28,28,31);
+	--neutral-100: rgb(250,250,252);
+	--neutral-300: rgb(230,230,235);
+	--purple: rgb(129,114,247);
+	--purple-100: rgb(243,240,255);
 }
 .navbar {
 	background: #fff;
@@ -2100,7 +2108,7 @@ body {
 	top: 0;
 	width: 100%;
 	z-index: 4;
-	border-bottom: 1px rgb(230,230,235) solid;
+	border-bottom: 1px var(--neutral-300) solid;
 }
 
 .navbar a {
@@ -2132,8 +2140,8 @@ body {
 }
 
 .navbar-brand svg {
-    height: 20px;
-    margin-right: .5rem;
+	height: 20px;
+	margin-right: .5rem;
 }
 
 .navbar-brand .navbar-item:first-child a {
@@ -2304,26 +2312,10 @@ body {
 }
 
 .navbar-divider {
-	background-color: #e1e1e1;
+	background-color: var(--neutral-300);
 	border: none;
 	height: 1px;
 	margin: .25rem 0
-}
-
-.navbar .button {
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	background: #fff;
-	border: 1px solid #e1e1e1;
-	border-radius: .15rem;
-	height: 1.75rem;
-	color: #222;
-	padding: 0 .75em;
-	white-space: nowrap
 }
 
 @media screen and (max-width:768.5px) {
@@ -2370,7 +2362,7 @@ body {
 
 	.navbar-menu .navbar-link:hover,
 	.navbar-menu a.navbar-item:hover {
-		color: rgb(129,114,247)
+		color: var(--purple)
 	}
 }
 
@@ -2426,13 +2418,16 @@ body {
 
 	.navbar-end .navbar-link,
 	.navbar-end>.navbar-item {
-		color: var(--primary-text)
+		color: var(--purple);
+		border-radius: 999px;
+		margin: 8px 0;
 	}
 
 	.navbar-end .navbar-item.has-dropdown:hover .navbar-link,
 	.navbar-end .navbar-link:hover,
+	.navbar-end button:hover,
 	.navbar-end>a.navbar-item:hover {
-		color: rgb(129,114,247)
+		background-color: var(--purple-100)
 	}
 
 	.navbar-end .navbar-link::after {
@@ -2441,7 +2436,7 @@ body {
 
 	.navbar-dropdown {
 		background: #fff;
-		border: 1px solid #e1e1e1;
+		border: 1px solid var(--neutral-300);
 		border-top: none;
 		border-radius: 0 0 .25rem .25rem;
 		display: none;
@@ -2476,8 +2471,8 @@ body {
 }
 
 footer.footer {
-	background-color: #e1e1e1;
-	color: #5d5d5d;
+	background-color: var(--neutral-100);
+	border-top: 1px var(--neutral-300) solid;
 	font-size: .83333rem;
 	line-height: 1.6;
 	padding: 1.5rem;
@@ -2489,8 +2484,24 @@ footer.footer {
 	flex-grow: 1;
 }
 
+.footer-item {
+	margin-left: 8px;
+	margin-right: 8px;
+	white-space: nowrap;
+}
+
 .soc {
 	padding: 0.5rem;
+}
+
+.soc svg {
+	width: 32px;
+	height: 32px;
+	margin-right: 16px;
+}
+
+.soc a:hover {
+	text-decoration: none;
 }
 
 .footer p {
@@ -2498,5 +2509,5 @@ footer.footer {
 }
 
 .footer a {
-	color: #191919
+	color: var(--primary-text)
 }
