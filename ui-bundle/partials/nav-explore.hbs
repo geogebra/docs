@@ -2,14 +2,15 @@
   {{#if page.component}}
   <div class="context">
     <span class="title">{{page.component.title}}</span>
-    <span class="version">{{#if (or page.componentVersion.version (ne page.componentVersion.displayVersion 'en'))}}{{page.componentVersion.displayVersion}}{{/if}}</span>
+    <span class="version">{{#if (ne page.componentVersion.displayVersion 'en')}}{{page.componentVersion.displayVersion}}{{/if}}</span>
   </div>
   {{/if}}
   <ul class="components">
-    {{#each site.components}}
-    <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
-      <div class="title"><a href="{{{relativize ./url}}}">{{{./title}}}</a></div>
+    <li class="component{{#if (eq 'Manual' @root.page.component.title)}} is-current{{/if}}">
+      <div class="title"><a href="{{{relativize '/manual/'}}}{{page.componentVersion.version}}">Manual</a></div>
     </li>
-    {{/each}}
+    <li class="component{{#if (eq 'Reference' @root.page.component.title)}} is-current{{/if}}">
+      <div class="title"><a href="{{{relativize '/reference/en'}}}">Reference</a></div>
+    </li>
   </ul>
 </div>
