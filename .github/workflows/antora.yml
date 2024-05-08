@@ -37,6 +37,7 @@ jobs:
           node-version: '20.x'
       - run: npm ci
       - run: npm run build
+      - run: cp static/* ./build/site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
