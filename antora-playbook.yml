@@ -6,9 +6,13 @@ content:
   sources:
     - url: https://github.com/geogebra/manual
       start_paths:
+        - cs
         - de
         - en
+        - es
+        - fr
         - it
+        - nl
     - url: https://github.com/geogebra/integration
       start_paths:
         - reference
