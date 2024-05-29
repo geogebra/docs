@@ -12,7 +12,9 @@ content:
         - es
         - fr
         - it
+        - ja
         - nl
+        - tr
     - url: https://github.com/geogebra/integration
       start_paths:
         - reference
