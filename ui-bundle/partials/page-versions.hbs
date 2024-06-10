@@ -1,5 +1,5 @@
 {{#if (ne page.componentVersion.displayVersion 'en')}}
-<div class="page-versions">
+<div class="page-versions" data-en="{{{page.attributes.en}}}">
   <button class="version-menu-toggle" title="Show other versions of page">{{@root.page.componentVersion.displayVersion}}</button>
   <div class="version-menu">
     {{#if page.attributes.en}}
@@ -7,6 +7,9 @@
     <a class="version
       {{~#if (eq ./version @root.page.version)}} is-current{{/if~}}
       {{~#if ./missing}} is-missing{{/if}}" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+    {{/each}}
+    {{#each (newlinks page.attributes.en)}}
+      <a class="version is-missing newlink" style="display:none" href="https://github.com/geogebra/manual/new/main/{{./version}}/{{./docdir}}">{{./displayVersion}} [create]</a>
     {{/each}}
     {{else}}
     <a class="version is-missing" href="{{{relativize '/'}}}manual/{{page.componentVersion.version}}/missing/">No translations</a>

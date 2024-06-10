@@ -20,3 +20,18 @@ MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
 })
 </script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+<script type="module">
+  document.querySelector('.version-menu-toggle').addEventListener('pointerdown',() => {
+    if (document.querySelector('.newlink')) {
+      fetch('https://raw.githubusercontent.com/geogebra/manual/main/en/modules/ROOT/pages/'
+              + document.querySelector('.page-versions').dataset['en'] + '.adoc')
+      .then(rsp=>rsp.text())
+      .then(text=> {
+        document.querySelectorAll('.newlink').forEach(link => {
+          link.href += "?value=" + encodeURIComponent(text);
+          link.style.display = '';
+        })
+      });
+    }
+  })
+</script>
