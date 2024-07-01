@@ -5,7 +5,7 @@
   },
   "devDependencies": {
     "@antora/cli": "3.1.7",
-    "@antora/site-generator": "3.1.7",
+    "@antora/site-generator": "3.1.8",
     "js-yaml": "^4.1.0",
     "serve": "^14.2.3"
   }
