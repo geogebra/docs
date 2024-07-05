@@ -7,10 +7,10 @@
   {{/if}}
   <ul class="components">
     <li class="component{{#if (eq 'Manual' @root.page.component.title)}} is-current{{/if}}">
-      <div class="title"><a href="{{{relativize '/manual/'}}}{{page.componentVersion.version}}">Manual</a></div>
+      <div class="title"><a href="{{{relativize '/manual/'}}}{{page.componentVersion.version}}/">Manual</a></div>
     </li>
     <li class="component{{#if (eq 'Reference' @root.page.component.title)}} is-current{{/if}}">
-      <div class="title"><a href="{{{relativize '/reference/en'}}}">Reference</a></div>
+      <div class="title"><a href="{{{relativize '/reference/en'}}}/">Reference</a></div>
     </li>
   </ul>
 </div>
