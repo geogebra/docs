@@ -1,3 +1,11 @@
+<script>
+  const redirect = new URLSearchParams(location.search).get("redirect");
+  const findLink = lang => document.querySelector("a.version[href*='/" + lang + "/']");
+  if (redirect) {
+    const link = findLink(redirect.replaceAll(/[^\w-]/g,'')) || findLink("en");
+    link && (location.href = link.href);
+  }
+</script>
 <script id="site-script" src="{{{uiRootPath}}}/js/site.js" data-ui-root-path="{{{uiRootPath}}}"></script>
 <script async src="{{{uiRootPath}}}/js/vendor/highlight.js"></script>
 {{#if env.SITE_SEARCH_PROVIDER}}
