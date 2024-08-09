@@ -2520,3 +2520,7 @@ footer.footer {
     background-color: #F8F8F8;
     border-radius: 4px;
 }
+
+.admonition ul {
+    clear: both;
+}
