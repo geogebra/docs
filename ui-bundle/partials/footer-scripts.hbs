@@ -1,8 +1,8 @@
 <script>
   const redirect = new URLSearchParams(location.search).get("redirect");
-  const findLink = lang => document.querySelector("a.version[href*='/" + lang + "/']");
+  const findLink = lang => document.querySelector("a.version[href*='/" + lang + "/']:not(.is-missing)");
   if (redirect) {
-    const link = findLink(redirect.replaceAll(/[^\w-]/g,'')) || findLink("en");
+    const link = findLink(redirect.replaceAll(/[^\w-]/g,'').split('-')[0]) || findLink("en");
     link && (location.href = link.href);
   }
 </script>
