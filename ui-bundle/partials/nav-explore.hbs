@@ -1,16 +1,16 @@
 <div class="nav-panel-explore{{#unless page.navigation}} is-active{{/unless}}" data-panel="explore">
   {{#if page.component}}
   <div class="context">
-    <span class="title">{{page.component.title}}</span>
+    <span class="title">{{l10n page.component.title}}</span>
     <span class="version">{{#if (ne page.componentVersion.displayVersion 'en')}}{{page.componentVersion.displayVersion}}{{/if}}</span>
   </div>
   {{/if}}
   <ul class="components">
     <li class="component{{#if (eq 'Manual' @root.page.component.title)}} is-current{{/if}}">
-      <div class="title"><a href="{{{relativize '/manual/'}}}{{page.componentVersion.version}}/">Manual</a></div>
+      <div class="title"><a href="{{{relativize '/manual/'}}}{{page.componentVersion.version}}/">{{l10n 'Manual'}}</a></div>
     </li>
     <li class="component{{#if (eq 'Reference' @root.page.component.title)}} is-current{{/if}}">
-      <div class="title"><a href="{{{relativize '/reference/en'}}}/">Reference</a></div>
+      <div class="title"><a href="{{{relativize '/reference/en'}}}/">{{l10n 'Reference'}}</a></div>
     </li>
   </ul>
 </div>

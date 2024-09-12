@@ -2,8 +2,8 @@
   <div class="footer-content">
      <p>
        <span class="footer-item">© GeoGebra®</span>
-     | <a class="footer-item" href="https://www.geogebra.org/license">License</a>
-     | <a class="footer-item" href="https://help.geogebra.org/">Help Center</a>
+     | <a class="footer-item" href="https://www.geogebra.org/license">{{l10n 'License'}}</a>
+     | <a class="footer-item" href="https://help.geogebra.org/">{{l10n 'HelpCenter'}}</a>
      | <span class="footer-item">Built using <a href="https://antora.org/" target="_blank" nofollow>Antora</a></span>
      </p>
   </div>
@@ -27,3 +27,8 @@
        </a>
    </div>
 </footer>
+<style>
+   .doc .admonitionblock td.icon i[title='Note']::after {
+     content: "{{l10n 'Note'}}"
+   }
+</style>
