@@ -2524,3 +2524,34 @@ footer.footer {
 .admonitionblock ul {
     clear: both;
 }
+
+#search-input {
+    border-radius: 999px;
+    min-width: 200px;
+    line-height: 28px;
+    padding: .5rem 1rem .5rem 2rem;
+}
+
+#search-field {
+    position: relative;
+}
+
+#search-field:before {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QTYuNDcxIDYuNDcxIDAgMCAwIDE2IDkuNSA2LjUgNi41IDAgMSAwIDkuNSAxNmMxLjYxIDAgMy4wOS0uNTkgNC4yMy0xLjU3bC4yNy4yOHYuNzlsNSA0Ljk5TDIwLjQ5IDE5bC00Ljk5LTV6bS02IDBDNy4wMSAxNCA1IDExLjk5IDUgOS41UzcuMDEgNSA5LjUgNSAxNCA3LjAxIDE0IDkuNSAxMS45OSAxNCA5LjUgMTR6Ii8+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIvPjwvc3ZnPg==');
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    content: '';
+    top: 12px;
+    left: 8px;
+    opacity: .87;
+}
+
+.gcse-wrapper {
+    position: absolute;
+}
+
+.gcse-wrapper .gsc-control-cse {
+    padding: 0;
+}
