@@ -15,6 +15,7 @@ content:
         - it
         - ja
         - nl
+        - pl
         - tr
     - url: https://github.com/geogebra/integration
       start_paths:
