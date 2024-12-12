@@ -36,7 +36,9 @@ MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
       .then(rsp=>rsp.text())
       .then(text=> {
         document.querySelectorAll('.newlink').forEach(link => {
-          link.href += "?value=" + encodeURIComponent(text);
+          const url = new URL(link.href);
+          url.searchParams.set("value", text)
+          link.href = url.toString();
           link.style.display = '';
         })
       });
