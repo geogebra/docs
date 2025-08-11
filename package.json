@@ -4,7 +4,7 @@
     "dev": "node makelocal.mjs && antora --fetch playbook-local.yml && npx serve build/site"
   },
   "devDependencies": {
-    "@antora/cli": "3.1.10",
+    "@antora/cli": "3.1.12",
     "@antora/site-generator": "3.1.10",
     "js-yaml": "^4.1.0",
     "serve": "^14.2.4"
