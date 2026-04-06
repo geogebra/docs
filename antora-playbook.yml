@@ -26,3 +26,6 @@ ui:
   bundle:
     url: ./ui-bundle
     snapshot: true
+antora:
+  extensions:
+    - './commandList.js'
