@@ -7,7 +7,7 @@
     "@antora/cli": "3.1.14",
     "@antora/site-generator": "3.1.14",
     "@eslint/js": "^10.0.1",
-    "eslint": "^10.2.1",
+    "eslint": "^10.3.0",
     "globals": "^17.5.0",
     "js-yaml": "^4.1.1",
     "serve": "^14.2.6"
