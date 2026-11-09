@@ -5,7 +5,7 @@
   },
   "devDependencies": {
     "@antora/cli": "3.2.1",
-    "@antora/site-generator": "3.2.1",
+    "@antora/site-generator": "3.2.2",
     "@eslint/js": "^10.0.1",
     "eslint": "^10.13.0",
     "globals": "^17.13.0",
